@@ -10,7 +10,8 @@ int main()
     int over = 0;
 
     int k;
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++)
+    {
         cin >> k;
         over = k>h ? over+1: over;
     }

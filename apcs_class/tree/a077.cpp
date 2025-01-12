@@ -45,7 +45,7 @@ int main()
             }
         }
 
-	cout << pow(2, d-1) + index-1 << endl;
+        cout << pow(2, d-1) + index-1 << endl;
 
     }
 }

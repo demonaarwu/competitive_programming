@@ -2,7 +2,8 @@
 
 using namespace std;
 
-struct Player {
+struct Player
+{
     char name;
     map<int, pair<int, int>> coordinate;
     vector<vector<int>> chart;
@@ -85,7 +86,7 @@ int main()
             if (is_bingo(Players[index].chart))
             {
                 cout << Players[index].name << ' ';
-		end = true;
+                end = true;
             }
         }
     }

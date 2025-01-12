@@ -14,19 +14,19 @@ int main()
 
     for (int i = 0; i < n; i++)
     {
-	cin >> tmp;
+        cin >> tmp;
 
-	if (tmp == 1)
-	{
-	    lo++;
-	}
+        if (tmp == 1)
+        {
+            lo++;
+        }
 
-	cin >> tmp;
+        cin >> tmp;
 
-	if (tmp == 1)
-	{
-	    ro++;
-	}
+        if (tmp == 1)
+        {
+            ro++;
+        }
     }
 
     cout << min(n-lo, lo) + min(n-ro, ro);

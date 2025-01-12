@@ -6,7 +6,8 @@ using namespace std;
 
 signed main()
 {
-    ios::sync_with_stdio(false); cin.tie(0);
+    ios::sync_with_stdio(false);
+    cin.tie(0);
 
     int n;
     vector<int> arr;
@@ -14,8 +15,8 @@ signed main()
 
     while (cin >> n)
     {
-	 arr.push_back(n);
-	 maximum = max(n, maximum);
+        arr.push_back(n);
+        maximum = max(n, maximum);
     }
 
     vector<int> ways = {1, 5, 10, 25, 50};
@@ -23,31 +24,31 @@ signed main()
 
     for (int i = 0; i <= maximum; i++)
     {
-	dp[0][i] = 1;
+        dp[0][i] = 1;
     }
 
     for (int way = 1; way < 5; way++)
     {
-	for (int i = 0; i <= maximum; i++)
-	{
-	    dp[way][i] = dp[way-1][i];
+        for (int i = 0; i <= maximum; i++)
+        {
+            dp[way][i] = dp[way-1][i];
 
-	    for (int j = 1; ways[way] * j <= i; j++)
-	    {
-		dp[way][i] += dp[way-1][i - ways[way] * j];
-	    }
-	}
+            for (int j = 1; ways[way] * j <= i; j++)
+            {
+                dp[way][i] += dp[way-1][i - ways[way] * j];
+            }
+        }
     }
 
-     for (int i = 0; i < arr.size(); i++) 
-     {
-	 if (dp[4][arr[i]] == 1)
-	 {
-	     cout << "There is only 1 way to produce " << arr[i] << " cents change." << endl;
-	 }
-	 else
-	 {
-	     cout << "There are " << dp[4][arr[i]] << " ways to produce " << arr[i] << " cents change." << endl;
-	 }
-     }
+    for (int i = 0; i < arr.size(); i++)
+    {
+        if (dp[4][arr[i]] == 1)
+        {
+            cout << "There is only 1 way to produce " << arr[i] << " cents change." << endl;
+        }
+        else
+        {
+            cout << "There are " << dp[4][arr[i]] << " ways to produce " << arr[i] << " cents change." << endl;
+        }
+    }
 }

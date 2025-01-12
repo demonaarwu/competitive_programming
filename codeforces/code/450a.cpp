@@ -12,25 +12,25 @@ int main()
 
     for (int i = 0; i < n; i++)
     {
-	cin >> child;
+        cin >> child;
 
-	children.push(make_pair(i, child));
+        children.push(make_pair(i, child));
     }
 
     while (children.size() > 1)
     {
-	int n = children.front().first;
-	int tmp = children.front().second;
+        int n = children.front().first;
+        int tmp = children.front().second;
 
-	if (tmp > m)
-	{
-	    children.pop();
-	    children.push(make_pair(n, tmp-m));
-	}
-	else
-	{
-	    children.pop();
-	}
+        if (tmp > m)
+        {
+            children.pop();
+            children.push(make_pair(n, tmp-m));
+        }
+        else
+        {
+            children.pop();
+        }
     }
 
     cout << children.front().first+1;

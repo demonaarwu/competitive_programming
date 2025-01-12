@@ -9,14 +9,14 @@ int main()
 
     while (k--)
     {
-	if (n % 10 == 0)
-	{
-	    n /= 10;
-	}
-	else
-	{
-	    n--;
-	}
+        if (n % 10 == 0)
+        {
+            n /= 10;
+        }
+        else
+        {
+            n--;
+        }
     }
 
     cout << n << endl;

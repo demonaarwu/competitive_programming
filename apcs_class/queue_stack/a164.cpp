@@ -70,6 +70,6 @@ int main()
 
     while (cin >> t)
     {
-	solve(t);
+        solve(t);
     }
 }

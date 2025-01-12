@@ -4,7 +4,8 @@ using namespace std;
 
 int main()
 {
-    ios_base::sync_with_stdio(0);cin.tie(0);
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
     unsigned long long n;
     cin >> n;
 
@@ -12,7 +13,7 @@ int main()
 
     while (n != 1)
     {
-	n = (n % 2 == 0)?(n/2):(3*n+1);
-	cout << n << ' ';
+        n = (n % 2 == 0)?(n/2):(3*n+1);
+        cout << n << ' ';
     }
 }

@@ -11,10 +11,10 @@ int main()
 
     if (cost <= n)
     {
-	cout << 0 << endl;
+        cout << 0 << endl;
     }
     else
     {
-	cout << cost-n << endl;
+        cout << cost-n << endl;
     }
 }

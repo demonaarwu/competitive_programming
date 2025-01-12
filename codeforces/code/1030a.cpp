@@ -8,9 +8,11 @@ int main()
     cin >> n;
 
     int k;
-    while (n--) {
+    while (n--)
+    {
         cin >> k;
-        if (k) {
+        if (k)
+        {
             cout << "HARD\n";
             return 0;
         }

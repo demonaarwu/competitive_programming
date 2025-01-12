@@ -17,29 +17,29 @@ int main()
 
     for (int i = 0; i < m; i++)
     {
-	cin >> tmp;
-	pq1.push(tmp);
-	pq2.push(tmp);
+        cin >> tmp;
+        pq1.push(tmp);
+        pq2.push(tmp);
     }
 
     for (int i = 0; i < n; i++)
     {
-	tmp = pq1.top();
-	pq1.pop();
-	maximum += tmp;
-	pq1.push(tmp-1);
+        tmp = pq1.top();
+        pq1.pop();
+        maximum += tmp;
+        pq1.push(tmp-1);
 
-	tmp = pq2.top();
-	pq2.pop();
+        tmp = pq2.top();
+        pq2.pop();
 
-	while (tmp <= 0)
-	{
-	    tmp = pq2.top();
-	    pq2.pop();
-	}
+        while (tmp <= 0)
+        {
+            tmp = pq2.top();
+            pq2.pop();
+        }
 
-	minimum += tmp;
-	pq2.push(tmp-1);
+        minimum += tmp;
+        pq2.push(tmp-1);
     }
 
     cout << maximum << ' ' << minimum;

@@ -21,7 +21,7 @@ int main()
     Point points[n+1];
     for (int i = 0; i < n; i++)
     {
-	cin >> points[i].x >> points[i].y;
+        cin >> points[i].x >> points[i].y;
     }
 
     points[n] = points[0];
@@ -29,7 +29,7 @@ int main()
 
     for (int i = 0; i < n; i++)
     {
-	area += cross(points[i], points[i+1]);
+        area += cross(points[i], points[i+1]);
     }
 
     cout << setprecision(2) << fixed << fabs(area)/2.0 << endl;

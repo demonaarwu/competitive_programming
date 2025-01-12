@@ -12,19 +12,19 @@ int main()
     cin >> s;
     for (int i = 0; i < n; i++)
     {
-	games[s[i]] += 1;
+        games[s[i]] += 1;
     }
 
     if (games['A'] > games['D'])
     {
-	cout << "Anton\n";
+        cout << "Anton\n";
     }
     else if (games['D'] > games['A'])
     {
-	cout << "Danik\n";
+        cout << "Danik\n";
     }
     else
     {
-	cout << "Friendship\n";
+        cout << "Friendship\n";
     }
 }

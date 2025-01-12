@@ -9,17 +9,17 @@ int main()
 
     if (w % 2 == 0)
     {
-	if (w >= 4)
-	{
-	    cout << "YES\n";
-	}
-	else
-	{
-	    cout << "NO\n";
-	}
+        if (w >= 4)
+        {
+            cout << "YES\n";
+        }
+        else
+        {
+            cout << "NO\n";
+        }
     }
     else
     {
-	cout << "NO\n";
+        cout << "NO\n";
     }
 }

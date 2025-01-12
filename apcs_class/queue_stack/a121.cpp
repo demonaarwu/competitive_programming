@@ -13,8 +13,8 @@ int main()
 
     while (n--)
     {
-	string s;
-	cin >> s;
+        string s;
+        cin >> s;
     }
 }
 
@@ -24,22 +24,22 @@ bool is_comma_match(string s)
 
     if (!len)
     {
-	return true;
+        return true;
     }
     else
     {
-	char last = s[0];
+        char last = s[0];
 
-	for (int i = 1; 1 < len; i++)
-	{
-	    if (s[i] == ',')
-	    {
-		if (!(last == ')') || !(last >= '0' && last <= '9'))
-		{
-		    return false;
-		}
-	    }
-	}
+        for (int i = 1; 1 < len; i++)
+        {
+            if (s[i] == ',')
+            {
+                if (!(last == ')') || !(last >= '0' && last <= '9'))
+                {
+                    return false;
+                }
+            }
+        }
     }
 
     return true;
@@ -52,21 +52,21 @@ bool is_parenmatch(string s)
 
     for (int i = 0; i < len; i++)
     {
-	if (s[i] == '(')
-	{
-	    left_count++;
-	}
-	else if (s[i] == ')')
-	{
-	    if (left_count == 0)
-	    {
-		return false;
-	    }
-	    else
-	    {
-		left_count--;
-	    }
-	}
+        if (s[i] == '(')
+        {
+            left_count++;
+        }
+        else if (s[i] == ')')
+        {
+            if (left_count == 0)
+            {
+                return false;
+            }
+            else
+            {
+                left_count--;
+            }
+        }
     }
 
     return left_count == 0;
@@ -75,6 +75,6 @@ bool is_parenmatch(string s)
 bool is_legal(string s)
 {
     if ()
-}
+    }
 
 

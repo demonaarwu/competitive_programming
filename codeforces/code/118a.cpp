@@ -12,10 +12,10 @@ int main()
 
     for (int i = 0; i < length; i++)
     {
-	if (find(vowels.begin(), vowels.end(), (char) tolower(s[i])) == vowels.end())
-	{
-	    cout << '.';
-	    cout << (char) tolower(s[i]);
-	}
+        if (find(vowels.begin(), vowels.end(), (char) tolower(s[i])) == vowels.end())
+        {
+            cout << '.';
+            cout << (char) tolower(s[i]);
+        }
     }
 }

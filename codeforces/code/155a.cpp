@@ -17,18 +17,18 @@ int main()
 
     for (int i = 1; i < n; i++)
     {
-	cin >> k;
+        cin >> k;
 
-	if (k > high)
-	{
-	    high = k;
-	    amazing += 1;
-	}
-	else if (k < low)
-	{
-	    low = k;
-	    amazing += 1;
-	}
+        if (k > high)
+        {
+            high = k;
+            amazing += 1;
+        }
+        else if (k < low)
+        {
+            low = k;
+            amazing += 1;
+        }
     }
 
     cout << amazing;

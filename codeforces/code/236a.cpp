@@ -11,17 +11,17 @@ int main()
 
     for (int i = 0; i < s.length(); i++)
     {
-	characters.insert(s[i]);
+        characters.insert(s[i]);
     }
 
     int distinct = characters.size();
 
     if (distinct % 2 != 0)
     {
-	cout << "IGNORE HIM!\n";
+        cout << "IGNORE HIM!\n";
     }
     else
     {
-	cout << "CHAT WITH HER!\n";
+        cout << "CHAT WITH HER!\n";
     }
 }

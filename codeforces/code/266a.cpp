@@ -6,7 +6,7 @@ int main()
 {
     int n;
     cin >> n;
-    
+
     string s;
     cin >> s;
 
@@ -14,10 +14,10 @@ int main()
 
     for (int i = 0; i < n-1; i++)
     {
-	if (s[i] == s[i+1])
-	{
-	    minimum++;
-	}
+        if (s[i] == s[i+1])
+        {
+            minimum++;
+        }
     }
 
     cout << minimum;

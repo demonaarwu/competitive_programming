@@ -8,20 +8,20 @@ bool is_legal(vector<int> arr, int size)
     int index = 0;
     for (int i = 1; i <= size; i++)
     {
-	if (arr[index] == i)
-	{
-	    index++;
-	}
-	else
-	{
-	    station.push(i);
-	}
+        if (arr[index] == i)
+        {
+            index++;
+        }
+        else
+        {
+            station.push(i);
+        }
 
-	while (!station.empty() && station.top() == arr[index])
-	{
-	    station.pop();
-	    index++;
-	}
+        while (!station.empty() && station.top() == arr[index])
+        {
+            station.pop();
+            index++;
+        }
     }
 
     return station.empty();
@@ -38,7 +38,7 @@ int main()
         int tmp;
         while (cin >> tmp, tmp)
         {
-	    vector<int> tmp_arr;
+            vector<int> tmp_arr;
             tmp_arr.push_back(tmp);
 
             for  (int i = 1; i < n; i++)
@@ -47,10 +47,10 @@ int main()
                 tmp_arr.push_back(tmp);
             }
 
-	    string ans = is_legal(tmp_arr, n) ? "Yes": "No";
-	    cout << ans << endl;
+            string ans = is_legal(tmp_arr, n) ? "Yes": "No";
+            cout << ans << endl;
         }
 
-	cout << endl;
+        cout << endl;
     }
 }

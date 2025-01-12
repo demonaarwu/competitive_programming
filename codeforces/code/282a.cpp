@@ -12,16 +12,16 @@ int main()
 
     while (n--)
     {
-	cin >> s;
+        cin >> s;
 
-	if ((s.compare("X++") == 0) || (s.compare("++X") == 0))
-	{
-	    x++;
-	}
-	else
-	{
-	    x--;
-	}
+        if ((s.compare("X++") == 0) || (s.compare("++X") == 0))
+        {
+            x++;
+        }
+        else
+        {
+            x--;
+        }
     }
 
     cout << x << endl;

@@ -14,27 +14,27 @@ int main()
 
     for (int i = 0; i < n; i++)
     {
-	cin >> distance;
+        cin >> distance;
 
-	if (distance < minimum_value)
-	{
-	    minimum_city = i+1;
-	    minimum_value = distance;
-	    repeat = 0;
-	}
-	else if (distance == minimum_value)
-	{
-	    repeat++;
-	}
+        if (distance < minimum_value)
+        {
+            minimum_city = i+1;
+            minimum_value = distance;
+            repeat = 0;
+        }
+        else if (distance == minimum_value)
+        {
+            repeat++;
+        }
     }
 
     if (repeat == 0)
     {
-	cout << minimum_city;
+        cout << minimum_city;
     }
     else
     {
-	cout << "Still Rozdil\n";
+        cout << "Still Rozdil\n";
     }
 
 }

@@ -11,39 +11,40 @@ bool cmp(pair<int, int> a, pair<int, int> b)
 
 signed main()
 {
-    ios::sync_with_stdio(false); cin.tie(0);
+    ios::sync_with_stdio(false);
+    cin.tie(0);
 
     int n;
     while (cin >> n)
     {
-	vector<pair<int, int>> segments(n);
+        vector<pair<int, int>> segments(n);
 
-	for (int i = 0; i < n; i++)
-	{
-	    cin >> segments[i].first >> segments[i].second;
-	}
+        for (int i = 0; i < n; i++)
+        {
+            cin >> segments[i].first >> segments[i].second;
+        }
 
-	sort(begin(segments), end(segments), cmp);
+        sort(begin(segments), end(segments), cmp);
 
-	int length = 0;
-	int l = segments[0].first;
-	int r = segments[0].second;
+        int length = 0;
+        int l = segments[0].first;
+        int r = segments[0].second;
 
-	for (int i = 1; i < n; i++)
-	{
-	    if (segments[i].first >= r)
-	    {
-		length += (r - l);
-		l = segments[i].first;
-		r = segments[i].second;
-	    }
-	    else if (segments[i].second > r)
-	    {
-		r = segments[i].second;
-	    }
-	}
+        for (int i = 1; i < n; i++)
+        {
+            if (segments[i].first >= r)
+            {
+                length += (r - l);
+                l = segments[i].first;
+                r = segments[i].second;
+            }
+            else if (segments[i].second > r)
+            {
+                r = segments[i].second;
+            }
+        }
 
-	length += (r-l);
-	cout << length << endl;
+        length += (r-l);
+        cout << length << endl;
     }
 }

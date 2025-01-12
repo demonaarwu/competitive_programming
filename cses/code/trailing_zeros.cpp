@@ -12,7 +12,7 @@ int main()
 
     for (int i = 1; pow(5, i) <= n; i++)
     {
-	n_of_five += n_five_f / pow(5, i);
+        n_of_five += n_five_f / pow(5, i);
     }
 
     cout << n_of_five << endl;

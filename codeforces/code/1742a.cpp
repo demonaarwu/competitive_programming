@@ -31,5 +31,5 @@ signed main()
             cout << "NO\n";
         }
     }
-	return 0;
+    return 0;
 }

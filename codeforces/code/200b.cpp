@@ -12,8 +12,8 @@ int main()
 
     for (int i = 0; i < n; i++)
     {
-	cin >> k;
-	sum += k;
+        cin >> k;
+        sum += k;
     }
 
     cout << (double) sum / n;

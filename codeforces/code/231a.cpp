@@ -13,12 +13,12 @@ int main()
 
     while (n--)
     {
-	cin >> a1 >> a2 >> a3;
+        cin >> a1 >> a2 >> a3;
 
-	if ((a1 + a2 + a3) >= 2)
-	{
-	    problems += 1;
-	}
+        if ((a1 + a2 + a3) >= 2)
+        {
+            problems += 1;
+        }
     }
 
     cout << problems << '\n';

@@ -9,37 +9,38 @@ using namespace std;
 
 signed main()
 {
-    ios::sync_with_stdio(false); cin.tie(0);
+    ios::sync_with_stdio(false);
+    cin.tie(0);
     int n;
     cin >> n;
 
     while (n != 0)
     {
-	priority_queue<int, vector<int>, greater<int>> pq;
+        priority_queue<int, vector<int>, greater<int>> pq;
 
-	int m;
-	for (int i = 0; i < n; i++)
-	{
-	    cin >> m;
-	    pq.push(m);
-	}
+        int m;
+        for (int i = 0; i < n; i++)
+        {
+            cin >> m;
+            pq.push(m);
+        }
 
-	int cost = 0;
+        int cost = 0;
 
-	while (pq.size() >= 2)
-	{
-	    int a = pq.top();
-	    pq.pop();
-	    int b = pq.top();
-	    pq.pop();
+        while (pq.size() >= 2)
+        {
+            int a = pq.top();
+            pq.pop();
+            int b = pq.top();
+            pq.pop();
 
-	    cost += (a + b);
+            cost += (a + b);
 
-	    pq.push(a+b);
-	}
+            pq.push(a+b);
+        }
 
-	cout << cost << endl;
+        cout << cost << endl;
 
-	cin >> n;
+        cin >> n;
     }
 }

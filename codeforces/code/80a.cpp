@@ -6,40 +6,40 @@ bool is_prime(int n);
 
 int main()
 {
-   int n, m;
-   
-   cin >> n >> m;
+    int n, m;
 
-   n++;
+    cin >> n >> m;
 
-   while (1)
-   {
-       if (is_prime(n))
-       {
-	   if (n == m)
-	   {
-	       cout << "YES\n";
-	   }
-	   else
-	   {
-	       cout << "NO\n";
-	   }
+    n++;
 
-	   return 0;
-       }
+    while (1)
+    {
+        if (is_prime(n))
+        {
+            if (n == m)
+            {
+                cout << "YES\n";
+            }
+            else
+            {
+                cout << "NO\n";
+            }
 
-       n++;
-   }
+            return 0;
+        }
+
+        n++;
+    }
 }
 
 bool is_prime(int n)
 {
     for (int i = 2; i <= sqrt(n); i++)
     {
-	if (n % i == 0)
-	{
-	    return false;
-	}
+        if (n % i == 0)
+        {
+            return false;
+        }
     }
 
     return true;

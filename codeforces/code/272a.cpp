@@ -12,17 +12,17 @@ int main()
 
     for (int i = 0; i < n; i++)
     {
-	cin >> fingers;
-	sum += fingers;
+        cin >> fingers;
+        sum += fingers;
     }
 
     int ways = 0;
     for (int i = 1; i <= 5; i++)
     {
-	if (((sum+i) % (n+1)) != 1)
-	{
-	    ways++;
-	}
+        if (((sum+i) % (n+1)) != 1)
+        {
+            ways++;
+        }
     }
 
     cout << ways;

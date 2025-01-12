@@ -14,17 +14,17 @@ int main()
 
     for (int i = 0; i < n; i++)
     {
-	cin >> out >> in;
-	now = now + in - out;
+        cin >> out >> in;
+        now = now + in - out;
 
-	if (in > out)
-	{
+        if (in > out)
+        {
 
-	    if (now > high)
-	    {
-		high = now;
-	    }
-	}
+            if (now > high)
+            {
+                high = now;
+            }
+        }
     }
 
     cout << high;

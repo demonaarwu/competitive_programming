@@ -13,7 +13,7 @@ int main()
 
     for (int i = 0; i < n; i++)
     {
-	cin >> goals[i];
+        cin >> goals[i];
     }
 
     int goal1 = 1;
@@ -23,24 +23,24 @@ int main()
 
     for (int i = 0; i < n; i++)
     {
-	if (goals[i].compare(team1) != 0)
-	{
-	    team2 = goals[i];
-	    goal2++;
-	}
-	else
-	{
-	    goal1++;
-	}
+        if (goals[i].compare(team1) != 0)
+        {
+            team2 = goals[i];
+            goal2++;
+        }
+        else
+        {
+            goal1++;
+        }
     }
 
     if (goal1 > goal2)
     {
-	cout << team1;
+        cout << team1;
     }
     else
     {
-	cout << team2;
+        cout << team2;
     }
 
 }

@@ -18,15 +18,15 @@ bool is_stuck(short x, short y)
 {
     if (grids[x][y+1] && grids[x][y-1] && !grids[x+1][y] && !grids[x-1][y])
     {
-	return true;
+        return true;
     }
     else if (!grids[x][y+1] && !grids[x][y-1] && grids[x+1][y] && grids[x-1][y])
     {
-	return true;
+        return true;
     }
     else
     {
-	return false;
+        return false;
     }
 }
 
@@ -34,11 +34,11 @@ bool is_legal(short x, short y)
 {
     if (grids[x][y] || is_stuck(x, y))
     {
-	return false;
+        return false;
     }
     else
     {
-	return true;
+        return true;
     }
 }
 
@@ -47,44 +47,44 @@ void enumerate(short n, short x, short y)
 {
     if (n == 48)
     {
-	if (y == 7 && x == 1)
-	{
-	    ways += 1;
-	}
-	else
-	{
-	    return;
-	}
+        if (y == 7 && x == 1)
+        {
+            ways += 1;
+        }
+        else
+        {
+            return;
+        }
     }
     else
     {
-	if ((y == 7 && x == 1)) 
-	{
-	    return;
-	}
-	if (path[n] == '?')
-	{
-	    for (short i = 0; i < 4; i++)
-	    {
-		if (is_legal(x+dx[i], y+dy[i]))
-		{
-		    grids[x+dx[i]][y+dy[i]] = 1;
-		    enumerate(n+1, x+dx[i], y+dy[i]);
-		    grids[x+dx[i]][y+dy[i]] = 0;
-		}
-	    }
-	}
-	else
-	{
-	    short operation = operations[path[n]];
+        if ((y == 7 && x == 1))
+        {
+            return;
+        }
+        if (path[n] == '?')
+        {
+            for (short i = 0; i < 4; i++)
+            {
+                if (is_legal(x+dx[i], y+dy[i]))
+                {
+                    grids[x+dx[i]][y+dy[i]] = 1;
+                    enumerate(n+1, x+dx[i], y+dy[i]);
+                    grids[x+dx[i]][y+dy[i]] = 0;
+                }
+            }
+        }
+        else
+        {
+            short operation = operations[path[n]];
 
-	    if (is_legal(x+dx[operation], y+dy[operation]))
-	    {
-		grids[x+dx[operation]][y+dy[operation]] = 1;
-		enumerate(n+1, x+dx[operation], y+dy[operation]);
-		grids[x+dx[operation]][y+dy[operation]] = 0;
-	    }
-	}
+            if (is_legal(x+dx[operation], y+dy[operation]))
+            {
+                grids[x+dx[operation]][y+dy[operation]] = 1;
+                enumerate(n+1, x+dx[operation], y+dy[operation]);
+                grids[x+dx[operation]][y+dy[operation]] = 0;
+            }
+        }
     }
 }
 
@@ -94,10 +94,10 @@ signed main()
 
     for (short i = 0; i < 9; i++)
     {
-	grids[i][8] = 1;
-	grids[8][i] = 1;
-	grids[0][i] = 1;
-	grids[i][0] = 1;
+        grids[i][8] = 1;
+        grids[8][i] = 1;
+        grids[0][i] = 1;
+        grids[i][0] = 1;
     }
 
     grids[1][1] = 1;

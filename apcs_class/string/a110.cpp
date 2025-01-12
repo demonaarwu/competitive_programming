@@ -89,8 +89,8 @@ int main()
         if (outs == 3)
         {
             bases = {0, 0, 0, 0};
-	    half++;
-	    outs = 0;
+            half++;
+            outs = 0;
         }
 
         string pa = Players[current].record[times];
@@ -101,12 +101,12 @@ int main()
         else
         {
             scores += count_score(pa, bases);
-	    bases = create_new_bases(pa, bases);
+            bases = create_new_bases(pa, bases);
         }
 
-	/* print_bases(bases); */
-	/* cout << " " << pa << " " << outs << " " << current << endl; */
-	times = (current == 9) ? times+1: times;
+        /* print_bases(bases); */
+        /* cout << " " << pa << " " << outs << " " << current << endl; */
+        times = (current == 9) ? times+1: times;
         current = (current == 9) ? 1: current+1;
     }
 

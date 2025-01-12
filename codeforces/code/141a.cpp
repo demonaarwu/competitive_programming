@@ -9,8 +9,8 @@ int main()
 
     if (s1.length() + s2.length() > s3.length())
     {
-	cout << "NO\n";
-	return 0;
+        cout << "NO\n";
+        return 0;
     }
 
     string s4 = s3;
@@ -18,12 +18,12 @@ int main()
 
     for (int i = 0; i < s1.length(); i++)
     {
-	s4[i] = s1[i];
+        s4[i] = s1[i];
     }
 
     for (int i = s1.length(); i < s3.length(); i++)
     {
-	s4[i] = s2[i-s1.length()];
+        s4[i] = s2[i-s1.length()];
     }
 
     sort(s3.begin(), s3.end());
@@ -31,11 +31,11 @@ int main()
 
     if (s4.compare(s3) == 0)
     {
-	cout << "YES\n";
+        cout << "YES\n";
     }
     else
     {
-	cout << "NO\n";
+        cout << "NO\n";
     }
 }
 

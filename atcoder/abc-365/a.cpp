@@ -9,24 +9,24 @@ int main()
 
     if (year % 4 != 0)
     {
-	cout << 365 << endl;
+        cout << 365 << endl;
     }
     else
     {
-	if (year % 100 == 0)
-	{
-	    if (year % 400 == 0)
-	    {
-		cout << 366 << endl;
-	    }
-	    else
-	    {
-		cout << 365 << endl;
-	    }
-	}
-	else
-	{
-	    cout << 366 << endl;
-	}
+        if (year % 100 == 0)
+        {
+            if (year % 400 == 0)
+            {
+                cout << 366 << endl;
+            }
+            else
+            {
+                cout << 365 << endl;
+            }
+        }
+        else
+        {
+            cout << 366 << endl;
+        }
     }
 }

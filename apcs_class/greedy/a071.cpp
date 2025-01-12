@@ -9,28 +9,29 @@ using namespace std;
 
 signed main()
 {
-    ios::sync_with_stdio(false); cin.tie(0);
+    ios::sync_with_stdio(false);
+    cin.tie(0);
     int n, m;
     cin >> n >> m;
 
     priority_queue<int, vector<int>, greater<int>> pq;
     for (int i = 0; i < m; i++)
     {
-	pq.push(0);
+        pq.push(0);
     }
 
     int k, j;
     for (int i = 0; i < n; i++)
     {
-	cin >> k;
-	j = pq.top() + k;
-	pq.pop();
-	pq.push(j);
+        cin >> k;
+        j = pq.top() + k;
+        pq.pop();
+        pq.push(j);
     }
 
     while (pq.size() > 1)
     {
-	pq.pop();
+        pq.pop();
     }
 
     cout << pq.top() << endl;

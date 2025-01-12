@@ -13,7 +13,7 @@ int main()
 
     do
     {
-	permutations.push_back(s);
+        permutations.push_back(s);
     }
     while (next_permutation(begin(s), end(s)));
 
@@ -21,6 +21,6 @@ int main()
 
     for (int i = 0, l = permutations.size(); i < l; i++)
     {
-	cout << permutations[i] << '\n';
+        cout << permutations[i] << '\n';
     }
 }

@@ -12,13 +12,13 @@ int main()
 
     for (int i = 0; i <= mi; i++)
     {
-	for (int j = 0; j <= mi; j++)
-	{
-	    if ((i*i + j == n) && (i + j*j == m))
-	    {
-		pairs++;
-	    }
-	}
+        for (int j = 0; j <= mi; j++)
+        {
+            if ((i*i + j == n) && (i + j*j == m))
+            {
+                pairs++;
+            }
+        }
     }
 
     cout << pairs;

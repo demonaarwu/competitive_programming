@@ -8,11 +8,11 @@ bool is_legal(int y, int x, vector<int> down_record, vector<int> up_record, vect
 {
     if (chessboard[y][x] == '.' && x_record[x] == 0 && down_record[x-y+7] == 0 && up_record[x+y] == 0)
     {
-	return true;
+        return true;
     }
     else
     {
-	return false;
+        return false;
     }
 }
 
@@ -20,28 +20,28 @@ int calculate_ways(int y, vector<int> down_record, vector<int> up_record, vector
 {
     if (y == 8)
     {
-	return 1;
+        return 1;
     }
     else
     {
-	int ways = 0;
+        int ways = 0;
 
-	for (int x = 0; x < 8; x++)
-	{
-	    if (is_legal(y, x, down_record, up_record, x_record))
-	    {
-		vector<int> c_x = x_record;
-		vector<int> c_d = down_record;
-		vector<int> c_u = up_record;
-		c_x[x] = 1;
-		c_d[x-y+7] = 1;
-		c_u[x+y] = 1;
+        for (int x = 0; x < 8; x++)
+        {
+            if (is_legal(y, x, down_record, up_record, x_record))
+            {
+                vector<int> c_x = x_record;
+                vector<int> c_d = down_record;
+                vector<int> c_u = up_record;
+                c_x[x] = 1;
+                c_d[x-y+7] = 1;
+                c_u[x+y] = 1;
 
-		ways += calculate_ways(y+1, c_d, c_u, c_x);
-	    }
-	}
+                ways += calculate_ways(y+1, c_d, c_u, c_x);
+            }
+        }
 
-	return ways;
+        return ways;
     }
 }
 
@@ -51,7 +51,7 @@ int main()
 
     for (int y = 0; y < 8; y++)
     {
-	cin >> chessboard[y];
+        cin >> chessboard[y];
     }
 
 

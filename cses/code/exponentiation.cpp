@@ -10,22 +10,22 @@ int expo(int a, int b)
 {
     if (b == 0)
     {
-	return 1;
+        return 1;
     }
     else if (b == 1)
     {
-	return a;
+        return a;
     }
     else
     {
-	if (b % 2 == 0)
-	{
-	    return expo((a*a) % mod, b/2) % mod;
-	}
-	else
-	{
-	    return (a * expo((a*a) % mod, b/2)) % mod;
-	}
+        if (b % 2 == 0)
+        {
+            return expo((a*a) % mod, b/2) % mod;
+        }
+        else
+        {
+            return (a * expo((a*a) % mod, b/2)) % mod;
+        }
     }
 }
 
@@ -37,7 +37,7 @@ signed main()
     int a, b;
     while (n--)
     {
-	cin >> a >> b;
-	cout << expo(a, b) << endl;
+        cin >> a >> b;
+        cout << expo(a, b) << endl;
     }
 }

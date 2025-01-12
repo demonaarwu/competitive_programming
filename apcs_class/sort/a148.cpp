@@ -6,11 +6,11 @@ bool cmp(pair<int, int> p1, pair<int, int> p2)
 {
     if (p1.second == p2.second)
     {
-	return p1.first > p2.first;
+        return p1.first > p2.first;
     }
     else
     {
-	return p1.second < p2.second;
+        return p1.second < p2.second;
     }
 }
 
@@ -20,23 +20,23 @@ int main()
 
     while (getline(cin, s))
     {
-	map<int, int> records;
+        map<int, int> records;
         int len = s.length();
         for (int i = 0; i < len; i++)
         {
-	    records[(int) s[i]] += 1;
+            records[(int) s[i]] += 1;
         }
-	vector<pair<int, int>> chars;
-	for (auto record: records)
-	{
-	    chars.push_back(record);
-	}
-	sort(begin(chars), end(chars), cmp);
+        vector<pair<int, int>> chars;
+        for (auto record: records)
+        {
+            chars.push_back(record);
+        }
+        sort(begin(chars), end(chars), cmp);
 
-	for (auto symbol: chars)
-	{
-	    cout << symbol.first << ' ' << symbol.second << endl;
-	}
+        for (auto symbol: chars)
+        {
+            cout << symbol.first << ' ' << symbol.second << endl;
+        }
         cout << endl;
     }
 }

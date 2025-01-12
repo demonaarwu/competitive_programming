@@ -10,12 +10,12 @@ int main()
 
     for (int i = 2; i < 31; i++)
     {
-	fib[i] = fib[i-1] + fib[i-2];
+        fib[i] = fib[i-1] + fib[i-2];
     }
 
     int n;
     while (cin >> n)
     {
-	cout << fib[n] << endl;
+        cout << fib[n] << endl;
     }
 }

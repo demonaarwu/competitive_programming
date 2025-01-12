@@ -22,7 +22,7 @@ int main()
             {
                 if (parens.empty())
                 {
-		    p_c = 0;
+                    p_c = 0;
                     break;
                 }
                 else

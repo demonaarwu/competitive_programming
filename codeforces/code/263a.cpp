@@ -10,17 +10,17 @@ int main()
 
     for (int x = 0; x < 5; x++)
     {
-	for (int y = 0; y < 5; y++)
-	{
-	    cin >> n;
+        for (int y = 0; y < 5; y++)
+        {
+            cin >> n;
 
-	    if (n == 1)
-	    {
-		i = x;
-		j = y;
-		break;
-	    }
-	}
+            if (n == 1)
+            {
+                i = x;
+                j = y;
+                break;
+            }
+        }
     }
 
     cout << abs(2-i) + abs(2-j) << "\n";

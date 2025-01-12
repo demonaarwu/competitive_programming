@@ -1,14 +1,16 @@
 #include <iostream>
 using namespace std;
 
-void discount(double* p1, double* p2){
+void discount(double* p1, double* p2)
+{
     if (*p1 == *p2)
     {
-	*p2 = *p1 / 2.0;
+        *p2 = *p1 / 2.0;
     }
 }
 
-int main(){
+int main()
+{
     double p1, p2;
     cout << "Original price:" << endl;
     cin >> p1 >> p2;
@@ -17,5 +19,5 @@ int main(){
     cout << p1 << " " << p2 << endl;
     return 0;
 }
- 
+
 

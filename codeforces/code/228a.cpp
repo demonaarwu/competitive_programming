@@ -9,8 +9,8 @@ int main()
 
     for (int i = 0; i < 4; i++)
     {
-	cin >> color;
-	colors.insert(color);
+        cin >> color;
+        colors.insert(color);
     }
 
     cout << 4-colors.size();

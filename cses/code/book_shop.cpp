@@ -4,7 +4,8 @@ using namespace std;
 
 int main()
 {
-    ios::sync_with_stdio(0);cin.tie(0);
+    ios::sync_with_stdio(0);
+    cin.tie(0);
 
     int n, m;
     cin >> n >> m;
@@ -16,7 +17,7 @@ int main()
     {
         cin >> weight[i];
     }
-    
+
     for (int i = 0; i < n; i++)
     {
         cin >> value[i];
@@ -50,7 +51,7 @@ int main()
                 knap[i][j] = knap[i-1][j];
             }
         }
-    } 
+    }
 
     cout << knap[n-1][m] << endl;
 }

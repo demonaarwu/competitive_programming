@@ -8,10 +8,10 @@ int first_appear(char c, int low)
 {
     for (int i = low; i < s.length(); i++)
     {
-	if (s[i] == c)
-	{
-	    return i;
-	}
+        if (s[i] == c)
+        {
+            return i;
+        }
     }
 
     return 0;
@@ -31,10 +31,10 @@ int main()
 
     if (f_o > s_l && s_l > f_l && f_l > f_e && f_e > f_h)
     {
-	cout << "YES\n";
+        cout << "YES\n";
     }
     else
     {
-	cout << "NO\n";
+        cout << "NO\n";
     }
 }

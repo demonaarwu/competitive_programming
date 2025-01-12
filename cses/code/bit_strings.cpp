@@ -8,18 +8,18 @@ long long pow1(long long n, long long times)
 {
     if (times == 0)
     {
-	return 1;
+        return 1;
     }
     else
     {
-	if (times % 2 == 0)
-	{
-	    return (pow1(n, times/2) * pow1(n, times/2)) % mod;
-	}
-	else
-	{
-	    return n * pow1(n, times/2) * pow1(n, times/2) % mod;
-	}
+        if (times % 2 == 0)
+        {
+            return (pow1(n, times/2) * pow1(n, times/2)) % mod;
+        }
+        else
+        {
+            return n * pow1(n, times/2) * pow1(n, times/2) % mod;
+        }
     }
 }
 

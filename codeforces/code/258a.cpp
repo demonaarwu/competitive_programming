@@ -11,20 +11,20 @@ int main()
 
     for (int i = 0, k = s.length()-1; i < k; i++)
     {
-	if (s[i] == '0')
-	{
-	    for (int j = i+1; j < k+1; j++)
-	    {
-		cout << s[j];
-	    }
+        if (s[i] == '0')
+        {
+            for (int j = i+1; j < k+1; j++)
+            {
+                cout << s[j];
+            }
 
-	    cout << '\n';
+            cout << '\n';
 
-	    return 0;
-	}
-	else
-	{
-	    cout << s[i];
-	}
+            return 0;
+        }
+        else
+        {
+            cout << s[i];
+        }
     }
 }

@@ -13,9 +13,9 @@ int main()
 
     for (int i = 0; i < n; i++)
     {
-	cin >> tmp;
-	pq.push(tmp);
-	mp[tmp] = i;
+        cin >> tmp;
+        pq.push(tmp);
+        mp[tmp] = i;
     }
 
     pq.pop();

@@ -10,7 +10,7 @@ int main()
     int arr[n];
     for (int i = 0; i < n; i++)
     {
-	cin >> arr[i];
+        cin >> arr[i];
     }
 
     sort(arr, arr+n);
@@ -18,15 +18,15 @@ int main()
     int money_earned = 0;
     for (int i = 0; i < m; i++)
     {
-	if (arr[i] >= 0)
-	{
-	    cout << money_earned;
-	    return 0;
-	}
-	else
-	{
-	    money_earned -= arr[i];
-	}
+        if (arr[i] >= 0)
+        {
+            cout << money_earned;
+            return 0;
+        }
+        else
+        {
+            money_earned -= arr[i];
+        }
     }
 
     cout << money_earned;

@@ -14,28 +14,28 @@ int main()
 
     for (int i = 0; i < length; i++)
     {
-	if (islower(s[i]))
-	{
-	    lower_c += 1;
-	}
-	else
-	{
-	    upper_c += 1;
-	}
+        if (islower(s[i]))
+        {
+            lower_c += 1;
+        }
+        else
+        {
+            upper_c += 1;
+        }
     }
 
     if (lower_c >= upper_c)
     {
-	for (int i = 0; i < length; i++)
-	{
-	    cout << (char) tolower(s[i]);
-	}
+        for (int i = 0; i < length; i++)
+        {
+            cout << (char) tolower(s[i]);
+        }
     }
     else
     {
-	for (int i = 0; i < length; i++)
-	{
-	    cout << (char) toupper(s[i]);
-	}
+        for (int i = 0; i < length; i++)
+        {
+            cout << (char) toupper(s[i]);
+        }
     }
 }

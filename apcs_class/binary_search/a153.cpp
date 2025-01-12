@@ -23,16 +23,16 @@ int main()
 
     while (abs(f(mid)) >= 1.0E-8)
     {
-	if (same(f(mid), f(l))) 
-	{
-	    l = mid;
-	}
-	else
-	{
-	    r = mid;
-	}
+        if (same(f(mid), f(l)))
+        {
+            l = mid;
+        }
+        else
+        {
+            r = mid;
+        }
 
-	mid = (l + r) / 2.0;
+        mid = (l + r) / 2.0;
     }
 
     cout << fixed << setprecision(6) << mid << endl;

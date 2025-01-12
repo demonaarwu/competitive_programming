@@ -4,7 +4,8 @@ using namespace std;
 
 int main()
 {
-    ios::sync_with_stdio;cin.tie(0);
+    ios::sync_with_stdio;
+    cin.tie(0);
     int n;
     cin >> n;
 
@@ -14,8 +15,8 @@ int main()
 
     while (n--)
     {
-	cin >> k;
-	ns.insert(k);
+        cin >> k;
+        ns.insert(k);
     }
 
     cout << ns.size() << endl;

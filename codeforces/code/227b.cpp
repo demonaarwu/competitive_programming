@@ -4,7 +4,8 @@ using namespace std;
 
 int main()
 {
-    ios_base::sync_with_stdio(false); cin.tie(0);
+    ios_base::sync_with_stdio(false);
+    cin.tie(0);
     map<int, int> history;
     int n;
     cin >> n;
@@ -12,8 +13,8 @@ int main()
     int arr[n];
     for (int i = 0; i < n; i++)
     {
-	cin >> arr[i];
-	history[arr[i]] = i;
+        cin >> arr[i];
+        history[arr[i]] = i;
     }
 
     int query_c;
@@ -26,10 +27,10 @@ int main()
 
     for (int i = 0; i < query_c; i++)
     {
-	cin >> target;
+        cin >> target;
 
-	m1 += history[target]+1;
-	m2 += n-history[target];
+        m1 += history[target]+1;
+        m2 += n-history[target];
     }
 
 

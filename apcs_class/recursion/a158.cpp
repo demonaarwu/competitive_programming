@@ -6,11 +6,11 @@ int f91(int n)
 {
     if (n <= 100)
     {
-	return f91(f91(n+11));
+        return f91(f91(n+11));
     }
     else
     {
-	return n-10;
+        return n-10;
     }
 }
 
@@ -21,8 +21,8 @@ int main()
 
     while (n != 0)
     {
-	cout << "f91(" << n << ") = ";
-	cout << f91(n) << endl;
-	cin >> n;
+        cout << "f91(" << n << ") = ";
+        cout << f91(n) << endl;
+        cin >> n;
     }
 }

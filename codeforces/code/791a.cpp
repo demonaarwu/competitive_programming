@@ -11,9 +11,9 @@ int main()
 
     while (a <= b)
     {
-	year++;
-	a *= 3;
-	b *= 2;
+        year++;
+        a *= 3;
+        b *= 2;
     }
 
     cout << year << endl;

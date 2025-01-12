@@ -24,7 +24,7 @@ string to_binary(int n)
     int len = binary.length();
     for (int i = 0; i < 3-len; i++)
     {
-	binary = "0" + binary;
+        binary = "0" + binary;
     }
     return binary;
 }
@@ -91,7 +91,7 @@ int main()
 
     for (int i = 0; i < n; i++)
     {
-	string s;
+        string s;
         getline(cin, s);
 
         if (is_legal(s))
@@ -99,7 +99,7 @@ int main()
             vector<string> codes = generate_codes(s);
 
             int len = s.length();
-            
+
             double codes_len = codes.size();
             int percentage = round((double) codes_len*400.0/((double) len));
             print_result(codes, percentage);
